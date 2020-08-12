@@ -1,0 +1,198 @@
+$base-color:#03071E;
+$base-color2:#011627;
+$secondarycolor:#F0F3BD;
+$text-color:#fff1e6;
+$cap-color:#9b9dad;
+$logofont:'Anton',
+sans-serif;
+$logofont2: 'Montserrat Subrayada',
+sans-serif;
+$headingtext:'Montserrat',
+sans-serif;
+$paragraphtext:'Poppins',
+sans-serif;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $text-color;
+}
+
+// ↑
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.about {
+    width: 100vw;
+    background-color: $base-color;
+
+    .aboutme {
+        color: $base-color;
+        font-size: 35px;
+        background: $text-color;
+        text-align: center;
+        height: 180px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: $headingtext;
+        clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 39%, 19% 93%, 0 76%, 0 55%);
+
+        .backtohome a {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 16px;
+            width: auto;
+            text-decoration: underline;
+            height: auto;
+            font-family: $paragraphtext;
+            color: $base-color2;
+            cursor: pointer;
+        }
+    }
+
+    .aboutcontent {
+        padding: 20px 50px;
+        margin-bottom: 50px;
+
+        .heading {
+            height: 50px;
+            font-family: $headingtext;
+            color: $text-color;
+            font-size: 30px;
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '';
+                background-color: $cap-color;
+                width: 20%;
+                height: 2px;
+                position: absolute;
+                top: 0%;
+                right: -10%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: lighter;
+            font-family: $paragraphtext;
+            letter-spacing: 2px;
+
+            strong {
+                color: $secondarycolor;
+                word-spacing: 3px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    footer {
+        width: 100vw;
+        height: 60px;
+        letter-spacing: 3px;
+        background-color: $secondarycolor;
+        font-size: .9em;
+        color: $cap-color;
+        font-family: $paragraphtext;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .footer2 {
+        width: 100vw;
+        height: 60px;
+        letter-spacing: 3px;
+        background-color: $cap-color;
+        font-size: .9em;
+        color: $base-color2;
+        font-family: $paragraphtext;
+        text-align: center;
+        line-height: 60px;
+    }
+}
+
+.anim {
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 1000px;
+    height: 300px;
+    transform: rotate(180deg);
+
+    svg {
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+
+        .animtext {
+            fill: $cap-color;
+            opacity: .1;
+            font-size: 120px;
+            font-family: $headingtext;
+
+        }
+    }
+}
+
+.totop {
+    position: fixed;
+    bottom: 10vh;
+    right: 20px;
+    background-color: rgba(105, 99, 99, 0.285);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.244);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .about {
+        padding-bottom: 15vh;
+
+        .aboutme {
+            justify-content: start;
+            font-size: 30px;
+            position: relative;
+
+            .backtohome a {
+                font-size: 12px;
+            }
+
+        }
+
+        .aboutcontent {
+            padding: 20px 25px;
+        }
+    }
+
+    .anim svg text .animtext {
+        font-size: 45px;
+        opacity: .3;
+    }
+
+    .totop {
+        opacity: 0;
+    }
+}

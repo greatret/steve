@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap"
+            rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body>
+        <main>
+            <div class="logo">
+                steve
+            </div>
+            <div class="contact">
+                <div class="insta">
+                    <img src="images/instagram-sketched.svg" alt="">
+                </div>
+                <div class="facebook">
+                    <img src="images/facebook.svg" alt="">
+                </div>
+                <div class="snapchat">
+                    <img src="images/snapchat.svg" alt="">
+                </div>
+                <div class="linkedin">
+                    <img src="images/linkedin.svg" alt="">
+                </div>
+            </div>
+            <nav class="nav1">
+                <a href="about.htm">About</a>
+            </nav>
+            <nav class="nav2">
+                <a href="blog.htm">Blog</a>
+            </nav>
+            <div class="copyright">
+                ©2020 Steve <br>
+                Demo or it didn't happen.
+            </div>
+            <div class="prop1 prop">
+                <img src="images/prop1.svg" alt="">
+            </div>
+            <div class="prop2 prop">
+                <img src="images/prop1.svg" alt="">
+            </div>
+            <div class="prop3 prop">
+                <img src="images/prop1.svg" alt="">
+            </div>
+            <div class="prop4 prop">
+                <img src="images/prop1.svg" alt="">
+            </div>
+            <div class="prop5 prop">
+                How To Create Content <br> That Keeps Your Readers Coming Back
+            </div>
+            <div class="typed">
+                <span> </span>
+            </div>
+            <div class="gify">
+                <img src="images/peeps_dribble-anim-min.gif" alt="">
+            </div>
+        </main>
+
+        <script>
+            $('body').mousemove(function (e) {
+                prop = $('.prop1');
+                x = (e.pageX * -1 / 15);
+                y = (e.pageY * -1 / 20);
+                prop.css({
+                    'transform': 'translate3d(' + x + 'px,' + y + 'px,0)'
+                });
+                prop2 = $('.prop2');
+                q = (e.pageX * 2 / 15);
+                r = (e.pageY * -3 / 20);
+                prop2.css({
+                    'transform': 'translate3d(' + q + 'px,' + r + 'px,0)'
+                });
+                prop3 = $('.prop3');
+                s = (e.pageX * 4 / 15);
+                t = (e.pageY * 6 / 20);
+                prop3.css({
+                    'transform': 'translate3d(' + s + 'px,' + t + 'px,0)'
+                });
+                prop4 = $('.prop4');
+                a = (e.pageX * 2 / 22);
+                b = (e.pageY * 2 / 22);
+                prop4.css({
+                    'transform': 'translate3d(' + a + 'px,' + b + 'px,0)'
+                });
+                prop5 = $('.prop5');
+                n = (e.pageX * -2 / 25);
+                m = (e.pageY * -2 / 28);
+                prop5.css({
+                    'transform': 'translate3d(' + n + 'px,' + m + 'px,0)'
+                });
+                img = $('.gify');
+                c = (e.pageX * 1 / 100);
+                d = (e.pageY * 2 / 50);
+                img.css({
+                    'transform': 'translate3d(' + c + 'px,' + d + 'px,0)'
+                });
+
+            })
+            var typed = new Typed('.typed  span', {
+                // Waits 1000ms after typing "First"
+                strings: [' Head Of Growth',
+                    'Content Creator',
+                    'Journalist',
+                    'Designer'
+                ],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true
+            });
+        </script>
+    </body>
+
+</html>

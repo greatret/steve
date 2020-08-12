@@ -1,0 +1,253 @@
+$base-color:#03071E;
+$base-color2:#011627;
+$secondarycolor:#F0F3BD;
+$text-color:#fff1e6;
+$cap-color:#9b9dad;
+$logofont:'Anton',
+sans-serif;
+$logofont2: 'Montserrat Subrayada',
+sans-serif;
+$headingtext:'Montserrat',
+sans-serif;
+$paragraphtext:'Poppins',
+sans-serif;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $text-color;
+}
+
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    padding-bottom: 10vh;
+    background-color: $base-color;
+}
+
+.blog {
+    background-color: $base-color;
+    width: 100vw;
+
+    .totop {
+        position: fixed;
+        z-index: 999;
+        bottom: 10vh;
+        right: 20px;
+        background-color: rgba(53, 52, 52, 0.285);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.244);
+        }
+    }
+
+    .bloghead {
+        color: $base-color;
+        background: $text-color;
+        height: 80vh;
+        position: relative;
+
+        h1 {
+            user-select: none;
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            font-family: $logofont2;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            display: inline-block;
+            color: $base-color;
+            font-size: 70px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -100%;
+                border-radius: 50%;
+                background-color: rgba(107, 99, 255, 0.383);
+                width: 200px;
+                height: 200px;
+                z-index: 7;
+            }
+        }
+
+        img {
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            height: 80%;
+            width: 50%;
+        }
+
+        .backtohome a {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 16px;
+            width: auto;
+            text-decoration: underline;
+            height: auto;
+            font-family: $paragraphtext;
+            color: $base-color2;
+            cursor: pointer;
+            z-index: 999999;
+        }
+    }
+
+    .thumbnail {
+        height: 100vh;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 60px;
+            text-transform: capitalize;
+            text-shadow: 2px 2px #03071E;
+            font-family: $paragraphtext;
+        }
+    }
+
+    .thumbnail1 {
+        background-image: url('https://i2.wp.com/andreazoellner.com/wp-content/uploads/2018/05/james-mckinven-426304-unsplash.jpg?fit=2000%2C1125&amp;ssl=1&quot');
+
+        .title1 {
+            background-color: rgba(255, 159, 178, 0.7);
+        }
+    }
+
+    .thumbnail2 {
+        background-image: url('https://i1.wp.com/andreazoellner.com/wp-content/uploads/2017/05/jeshoots-com-219056.jpg?fit=2000%2C1333&amp;ssl=1&quot');
+
+        .title2 {
+            background-color: rgba(251, 220, 226, 0.7);
+        }
+    }
+
+    .thumbnail3 {
+        background-image: url('https://i1.wp.com/andreazoellner.com/wp-content/uploads/2017/04/tran-mau-tri-tam-57714.jpg?fit=2000%2C1333&amp;ssl=1&quot');
+
+        .title3 {
+            background-color: rgba(10, 205, 255, 0.7);
+        }
+    }
+
+    .thumbnail4 {
+        background-image: url('https://i1.wp.com/andreazoellner.com/wp-content/uploads/2016/12/newsroom-tips.jpg?fit=2000%2C1277&amp;ssl=1&quot');
+
+        .title4 {
+            background-color: rgba(123, 8, 40, 0.7);
+        }
+    }
+
+    .thumbnail5 {
+        background-image: url('https://i2.wp.com/andreazoellner.com/wp-content/uploads/2016/06/photo-1462826455854-8c0e5ea0947c.jpeg?fit=2000%2C1324&amp;ssl=1&quot');
+
+        .title5 {
+            background-color: rgba(255, 27, 28, 0.7);
+        }
+    }
+}
+
+footer {
+    width: 100vw;
+    height: 60px;
+    letter-spacing: 3px;
+    background-color: $secondarycolor;
+    font-size: .9em;
+    color: $cap-color;
+    font-family: $paragraphtext;
+    text-align: center;
+    line-height: 60px;
+}
+
+.footer2 {
+    width: 100vw;
+    height: 60px;
+    letter-spacing: 3px;
+    background-color: $cap-color;
+    font-size: .9em;
+    color: $base-color2;
+    font-family: $paragraphtext;
+    text-align: center;
+    line-height: 60px;
+}
+
+// ******************************* queries *********************************************
+
+
+@media only screen and (max-width:768px) {
+
+    body {
+        padding-bottom: 20vh;
+    }
+
+    .blog {
+        .totop {
+            bottom: 20%;
+        }
+
+        .bloghead {
+            height: 70vh;
+
+            h1 {
+                font-size: 50px;
+                left: 5%;
+                top: 10%;
+                z-index: 3;
+
+                &::after {
+                    top: -200%;
+                    z-index: -1;
+                    opacity: .4;
+                }
+            }
+
+            img {
+                bottom: 0%;
+                height: 100%;
+                width: 100%;
+                opacity: .6;
+            }
+
+            .backtohome a {
+                font-size: 16px;
+            }
+        }
+
+        .thumbnail {
+            height: 80vh;
+            background-repeat: no-repeat;
+
+            .title {
+                font-size: 40px;
+            }
+        }
+    }
+
+}

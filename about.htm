@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <link rel="stylesheet" href="styles/style2.css">
+    </head>
+
+    <body>
+        <div class="anim">
+            <svg width="1094" height="2" viewBox="0 0 794 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="path-1" d="M794 1H0" stroke="none" />
+                <text style="font-size: 100px;">
+                    <textPath xlink:href="#path-1" class="animtext">I am Steve </textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="about">
+            <div class="aboutme">
+                <div class="backtohome">
+                    <a href="index.htm"> Back to home</a>
+                </div>
+                Curriculum Vitae
+            </div>
+            <div class="aboutcontent">
+                <div class="heading">About me</div>
+                <p>I’m a Montréal-based content creator and brand strategist working in the tech industry. I’m
+                    passionate about creating quality content for the web and improving how people engage with
+                    information online.</p>
+            </div>
+            <div class="aboutcontent goout">
+                <div class="heading">Education</div>
+                <p>Bachelor’s Degree in Journalism, Concordia University, 2013</p>
+            </div>
+            <div class="aboutcontent  ">
+                <div class="heading">Experience</div>
+                <p> <strong>Head of Growth | Kinsta Web Hosting </strong> <br>
+                    June 2020 to present, remote <br> <br> In my current position, I oversee growth marketing efforts at
+                    Kinsta including lead generation, advertisement, affiliate marketing, social media, and other
+                    lead-generation tactics.</p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Video Content Manager | Kinsta Web Hosting</strong><br>January 2020 to May 2020, Remote <br>
+                    <br>
+                    In this role, I oversaw the strategic use of video and develop assets for on-site and offsite
+                    marketing purposes.
+                </p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Chief Content Creator | SiteGround Web Hosting</strong><br>May 2018 to December 2019, Remote
+                    <br>
+                    <br>
+                    In this role, I created content and influenced creative direction and strategy for all of
+                    SiteGround’s properties in the English-speaking market.
+                </p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Content Creator | Automattic</strong><br>September 2015 – May 2018, Remote
+                    <br>
+                    <br>
+                    Wrote copy for WordPress.com landing pages, email campaigns, newsletters, blogs, and created video
+                    tutorials.
+                </p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Localization Partner (French Language) | Viki, Inc.</strong><br>September 2014 – May 2016,
+                    Remote
+                    <br>
+                    <br>
+                    Translated promotional materials from English to French and adapted them for the French-speaking
+                    markets worldwide.
+                </p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Sr. Analyst, Internal Communications | Standard Life</strong><br>April 2013 – June 2014,
+                    Montréal, Canada
+                    <br>
+                    <br>
+                    Created strategic communication plans and unique content for internal communication purposes across
+                    business sectors.
+                </p>
+            </div>
+            <div class="aboutcontent">
+                <!-- <div class="heading">About me</div> -->
+                <p><strong>Communications and kickaction.ca Coordinator | Girls Action Foundation</strong><br>May 2010 –
+                    April 2013, Montréal, Canada
+                    <br>
+                    <br>
+                    Developed communication tools, organized events, and implemented outreach strategies for the Girls
+                    Action and kickaction.ca websites.
+                </p>
+            </div>
+            <hr>
+            <footer>
+                ©2020 Steve
+                Demo or it didn't happen.
+            </footer>
+            <div class="footer2">
+                I am Steve
+            </div>
+
+        </div>
+        <div class="totop">
+            ↑
+        </div>
+        <script>
+            let text = document.querySelector('.animtext');
+
+            function update() {
+                if ($(window).width() >= 794) {
+                    var offset = window.scrollY * .7;
+
+                } else {
+                    var offset = window.scrollY * .2;
+                }
+
+                text.setAttribute('startOffset', offset);
+            }
+            window.addEventListener('scroll', update);
+            const goout = document.querySelector('.goout');
+            const totop = document.querySelector('.totop');
+            options = {};
+            let observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        totop.style.display = 'flex';
+                    } else {
+                        totop.style.display = 'none';
+                    }
+                })
+            }, options);
+            observer.observe(goout);
+
+            function totopp() {
+                let scrolloptions = {
+                    top: '0',
+                    behavior: 'smooth'
+                }
+                window.scrollTo(scrolloptions);
+            };
+            totop.addEventListener('click', totopp);
+        </script>
+    </body>
+
+</html>

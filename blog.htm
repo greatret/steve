@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap"
+            rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+            integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/CSSRulePlugin.min.js"
+            integrity="sha512-Qsi1/wzhv/tTbglg9qVSOoI8Tm/aQEBjhGszeFo86w9w7+VyCPU6aSm72ActHflic7o5zATaceSn9CW+EshtJg=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <link rel="stylesheet" href="styles/style3.css">
+    </head>
+
+    <body onload="main()">
+        <div class="blog">
+            <div class="totop">
+                ↑
+            </div>
+            <div class="bloghead ">
+                <div class="backtohome">
+                    <a href="index.htm"> Back to home</a>
+                </div>
+                <h1>Steve's Blog</h1>
+                <img src="images/Group 1.svg" id="blogsvg" alt="">
+            </div>
+            <div class="thumbnail1 thumbnail">
+                <div class="title1 title">
+                    Why Copywriters Should Learn UX
+                </div>
+            </div>
+            <div class="thumbnail2 thumbnail">
+                <div class="title2 title">
+                    developing a video strategy that will change your business.
+                </div>
+            </div>
+            <div class="thumbnail3 thumbnail">
+                <div class="title3 title">
+                    Why Copywriters Should Learn UX
+                </div>
+            </div>
+            <div class="thumbnail4 thumbnail">
+                <div class="title4 title">
+                    five newsroom tips for better website content
+                </div>
+            </div>
+            <div class="thumbnail5 thumbnail">
+                <div class="title5 title">
+                    Five apps to try now
+                </div>
+            </div>
+        </div>
+        <footer>
+            ©2020 Steve
+            Demo or it didn't happen.
+        </footer>
+        <div class="footer2">
+            I am Steve
+        </div>
+        <script>
+            function main() {
+
+                const totop = document.querySelector('.totop');
+
+                function totopp() {
+                    let scrolloptions = {
+                        top: '0',
+                        behavior: 'smooth'
+                    }
+                    window.scrollTo(scrolloptions);
+                };
+                totop.addEventListener('click', totopp);
+                const thumbnail1 = document.querySelector('.thumbnail1');
+                let observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) {
+                            totop.style.display = 'flex';
+                        } else {
+                            totop.style.display = 'none';
+                        }
+                    })
+                });
+                observer.observe(thumbnail1);
+                const bloghead = document.querySelector('.bloghead');
+                let observer2 = new IntersectionObserver(function (entries1) {
+                    entries1.forEach(entry1 => {
+                        if (entry1.isIntersecting) {
+                            var rule2 = CSSRulePlugin.getRule(".blog .bloghead h1:after");
+                            TweenMax.to(rule2, 1, {
+                                cssRule: {
+                                    y: 100,
+                                    opacity: .2,
+                                    ease: "bounce.out"
+                                },
+                            });
+
+                        } else {
+                            return;
+                        }
+                    })
+                });
+                observer2.observe(bloghead);
+            }
+        </script>
+    </body>
+
+</html>
